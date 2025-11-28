@@ -54,8 +54,7 @@ public class GestorNotas {
 
                     // === Validación de rango ===
                     if (nota < 0.0 || nota > 10.0) {
-                        throw new NotaInvalidaRuntimeException(
-                        "Nota fuera de rango [0-10]: " + nota);
+                        throw new NotaInvalidaRuntimeException(nota);
                     }
 
                     alumnos.add(new Alumno(nombre, nota));
