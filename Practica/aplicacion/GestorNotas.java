@@ -17,7 +17,7 @@ import Practica.excepcion.NotaInvalidaRuntimeException;
 public class GestorNotas {
 
     public void guardarAlumnos(List<Alumno> alumnos, String nombreFichero)
-            throws ErrorFicheroNotasException {
+        throws ErrorFicheroNotasException {
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(nombreFichero))) {
 
@@ -78,7 +78,7 @@ public class GestorNotas {
     }
     
     public void eliminarFichero(String nombreFichero) throws ErrorFicheroNotasException {
-    File f = new File(nombreFichero);
+        File f = new File(nombreFichero);
 
         // Intento de borrado
         if (!f.delete()) {
